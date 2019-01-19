@@ -248,7 +248,7 @@ import java.util.List;
 
 					// permission denied, boo! Disable the
 					// functionality that depends on this permission.
-					Toast.makeText(EditVedioActivity.this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
+					Toast.makeText(EditVedioActivity.this, getString(R.string.permission_denied_read_write), Toast.LENGTH_SHORT).show();
 				}
 				return;
 			}
@@ -395,7 +395,7 @@ import java.util.List;
 		if(playFile.exists()){
 			new ExtractTask(mVedioPath).execute();//执行抽取关键帧的异步任务
 		}else{
-			Toast.makeText(this, "请检查视频文件是否存在！", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, getString(R.string.check_video_file_exists), Toast.LENGTH_SHORT).show();
 		}
 	}
 
@@ -452,7 +452,7 @@ import java.util.List;
 			if(cutPostion!=null&&cutPostion.size()>0){
 				onSave();
 			}else{
-				Toast.makeText(this, "请选择删除视频片段！", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, getString(R.string.select_delete_vid_clip), Toast.LENGTH_SHORT).show();
 			}
 	}
 	
@@ -539,7 +539,7 @@ import java.util.List;
 			super.onPreExecute();
 			if(progressDialog1==null){
 				progressDialog1 = ProgressDialog.show(EditVedioActivity.this,
-						"加载中...", "请稍等...", true);
+						getString(R.string.loading), getString(R.string.please_wait), true);
 			}else{
 				progressDialog1.show();
 			}
@@ -712,7 +712,7 @@ import java.util.List;
 	 */
 	private void trimVideo(String workingPath, List<long[]> newSeeks){
 		progressDialog = ProgressDialog.show(EditVedioActivity.this,
-				"裁剪中...", "请稍等...", true);
+				getString(R.string.cropping), getString(R.string.please_wait), true);
 		File storagePath = new File(workingPath);             
 		storagePath.mkdirs();  
 		FfmpegManager manager = FfmpegManager.getInstance();
@@ -760,7 +760,7 @@ private void reRreshUI(){
 		progressDialog.cancel();
 		progressDialog=null;
 		if(mMessage!=null){
-			Toast.makeText(this, "编辑成功！", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, getString(R.string.successfully_edited), Toast.LENGTH_SHORT).show();
 			isEdit=true;//已经编辑过了
 			mVedioPath=finalPath;
 			init();

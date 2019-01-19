@@ -26,8 +26,7 @@ public class DatabaseContext extends ContextWrapper {
     public File getDatabasePath(String name) {
         //判断是否存在sd卡
         boolean sdExist = android.os.Environment.MEDIA_MOUNTED.equals(android.os.Environment.getExternalStorageState());
-        if(!sdExist){//如果不存在,
-            Log.e("SD卡管理：", "SD卡不存在，请加载SD卡");
+        if(!sdExist){
             return null;
         } 
         else{//如果存在

@@ -5,7 +5,7 @@
     <string name="action_settings">Settings</string>
 
 
-    <string name="all_images">全部图片</string>
+    <string name="all_images">All images</string>
     <string name="txt_bw_within_ten_words">Please be within 10 words</string>
     <string name="file_not_exists">The file you are working on does not exist!</string>
     <string name="working">Working</string>
@@ -13,4 +13,11 @@
     <string name="choose_delete_audio">Please choose to delete the audio end!</string>
     <string name="trim">Trim</string>
     <string name="cut">Cut</string>
+    <string name="permission_denied_read_write">Permission denied to read your External storage</string>
+    <string name="check_video_file_exists">Please check if the video file exists!</string>
+    <string name="select_delete_vid_clip">Please select to delete the video clip!</string>
+    <string name="loading">Loading...</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="cropping">Cropping...</string>
+    <string name="successfully_edited">Successfully edited...</string>
 </resources>

@@ -39,26 +39,6 @@
         </activity>
 
 
-        <activity
-            android:name=".RecordActivity"
-            android:screenOrientation="portrait"
-            ></activity>
-
-        <!--<activity
-            android:name=".EditVedioActivity"
-            android:screenOrientation="portrait"
-            ></activity>-->
-
-        <activity android:name=".VideoGridActivity"
-            android:screenOrientation="portrait"
-            ></activity>
-
-        <activity android:name=".AudioActivity"
-            android:screenOrientation="portrait"
-            ></activity>
-        <activity android:name=".AudioEditActivity"
-            android:screenOrientation="portrait"
-            ></activity>
 
     </application>
 

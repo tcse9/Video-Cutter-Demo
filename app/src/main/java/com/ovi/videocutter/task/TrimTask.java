@@ -13,13 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * @author TCX
- */
+
 public class TrimTask implements Runnable {
 
     private Context context;
-//    private VideoStitchingRequest videoStitchingRequest;
     private CompletionListener completionListener;
     private String mFfmpegInstallPath;
     private File srcFile;
@@ -29,7 +26,6 @@ public class TrimTask implements Runnable {
     public TrimTask(Context context, String mFfmpegInstallPath, File srcFile,File destFile,List<long[]> mNewSeeks, CompletionListener completionListener) {
         this.context = context;
         this.mFfmpegInstallPath = mFfmpegInstallPath;
-//        this.videoStitchingRequest = stitchingRequest;
         this.completionListener = completionListener;
         this.srcFile=srcFile;
         this.destFile=destFile;
@@ -62,10 +58,7 @@ public class TrimTask implements Runnable {
 			mMergeList.add(myMovie.getAbsolutePath());
 			String startTime= TimeFormatUtils.formatLongToTimeStr((int)mNewSeeks.get(i)[0]);
 			String durationTime=TimeFormatUtils.formatLongToTimeStr((int)(mNewSeeks.get(i)[1]-mNewSeeks.get(i)[0]));
-//			ffmpeg -ss 00:00:20 -t 00:00:10 -i D:/MyVideo.mpg -vcodec copy -acopy copy D:/Split.mpg
-//			String [] ffmpegTrimCommand={mFfmpegInstallPath,"-ss" ,startTime, "-t",durationTime,  "-i" ,srcFile.getAbsolutePath(), "-vcodec","copy" , "-acopy","copy",myMovie.getAbsolutePath(),"-y"};
-			
-			//切割的命令行
+
 			String [] ffmpegTrimCommand={mFfmpegInstallPath,"-i" ,srcFile.getAbsolutePath(),"-vcodec", "copy", "-acodec", "copy","-ss",startTime ,"-t" ,  durationTime,myMovie.getAbsolutePath(),"-y"};
 			try {
                 Process ffmpegProcess = new ProcessBuilder(ffmpegTrimCommand)
@@ -86,14 +79,13 @@ public class TrimTask implements Runnable {
             }
     	}
 
-    	//裁剪完成回调接口（MergeList为裁剪后短视频的路径集合）
-          completionListener.onProcessCompleted("Video trim Comleted",mMergeList);
+    	completionListener.onProcessCompleted("Video trim Comleted",mMergeList);
 
     }
     
     
     /**
-	 * 将播放的进度转换成类似00:00:01.000”这种形
+	 * Convert the progress of the playback to something like 00:00:01.000
 	 * @param progressPosition
 	 * @return
 	 */

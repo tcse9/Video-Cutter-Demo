@@ -2,9 +2,7 @@ package com.ovi.videocutter.manager;
 
 import java.util.ArrayList;
 
-/**
- * Created by Karthik on 22/01/16.
- */
+
 public class VideoStitchingRequest {
     private ArrayList<String> inputVideoFilePaths;
     private String outputPath;

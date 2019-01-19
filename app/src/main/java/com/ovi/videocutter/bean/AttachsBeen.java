@@ -3,12 +3,7 @@ package com.ovi.videocutter.bean;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * 稿件附件对象
- * 
- * @author Administrator
- * 
- */
+
 public class AttachsBeen implements Serializable{
 	public static final int STATUS_NORMAL=0;//正常状态
 	public static final int STATUS_SELECTED=1;//选中状态

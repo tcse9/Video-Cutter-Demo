@@ -15,9 +15,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-/**
- * Created by TCX on 22/01/16.
- */
 public class StitchingTask implements Runnable {
 
     private Context context;
@@ -42,7 +39,6 @@ public class StitchingTask implements Runnable {
     private void stitchVideo(Context context, String mFfmpegInstallPath, VideoStitchingRequest videoStitchingRequest, final CompletionListener completionListener) {
 
 
-    	//合成的路径
         String path = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "ffmpeg_videos";
         File dir = new File(path);
         if (!dir.exists()) {
@@ -62,10 +58,7 @@ public class StitchingTask implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        execFFmpegBinary("-i " + src.getAbsolutePath() + " -ss "+ startMs/1000 + " -to " + endMs/1000 + " -strict -2 -async 1 "+ dest.getAbsolutePath());
 
-        
-        //合成的FFmpeg命令行
         String[] sampleFFmpegcommand = {mFfmpegInstallPath, "-f", "concat", "-i", inputfile.getAbsolutePath(), "-c", "copy", videoStitchingRequest.getOutputPath()};
         try {
             Process ffmpegProcess = new ProcessBuilder(sampleFFmpegcommand)
@@ -88,7 +81,6 @@ public class StitchingTask implements Runnable {
         }
 
         inputfile.delete();
-        //合成成功的接口回调
         completionListener.onProcessCompleted("Video Stitiching Comleted",null);
 
     }

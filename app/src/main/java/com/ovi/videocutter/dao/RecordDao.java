@@ -12,11 +12,6 @@ import com.ovi.videocutter.bean.RecordDetail;
 
 import java.util.ArrayList;
 
-/**
- * 操作录制的视频的信息的数据库表的类
- * @author howie
- *
- */
 public class RecordDao {
 	private SQLHelper helper;
 	public RecordDao(Context context){
@@ -29,16 +24,7 @@ public class RecordDao {
 		db.close();
 	}
 	/**
-	 * 通过文件的路径查找某一条录制的视频的相关信息
-	 * @return
-	 */
-	public RecordDetail queryByPath(){
-		
-		return null;
-		
-	}
-	/**
-	 * 判断一个视频是否是通过此app录制的,如果是通过app录制的就把查出来的视频的信息返回去
+	 * Determine whether a video is recorded by this app, and if yes, return the information of the detected video.
 	 * @param bean
 	 * @return
 	 */
@@ -46,7 +32,6 @@ public class RecordDao {
 		boolean flag=false;
 		Gson gson=null;
 		SQLiteDatabase db = helper.getReadableDatabase();
-//		db.execSQL("select * from programmes where name =?",new Object[]{bean.getName()});
 		Cursor cursor = db.rawQuery("select flags,tips from records where path =?", new String[]{bean.getAchsPath()});
 		
 		while(cursor.moveToNext()){
@@ -54,18 +39,14 @@ public class RecordDao {
 				gson=new Gson();
 			}
 			flag=true;
-			String flags = cursor.getString(cursor.getColumnIndex("flags"));//所有的打标记的点的进度值的集合
+			String flags = cursor.getString(cursor.getColumnIndex("flags"));
 			String tips=cursor.getString(cursor.getColumnIndex("tips"));
 			ArrayList<Integer> flagList=gson.fromJson(flags, new TypeToken<ArrayList<Integer>>(){}.getType());
 			ArrayList<Integer> tipList=gson.fromJson(tips, new TypeToken<ArrayList<Integer>>(){}.getType());
-			bean.setFlags(flagList);//标记点的进度的集合
-			bean.setTips(tipList);//断点的进度的集合
+			bean.setFlags(flagList);
+			bean.setTips(tipList);
 		}
 		return bean;
 	}
 
-	public void update(RecordDetail recordDetail){
-//		String sql_reset_sequence="update records set name =? where name ='programmes'";
-	}
-	
 }

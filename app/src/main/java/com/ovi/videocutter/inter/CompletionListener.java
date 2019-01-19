@@ -7,6 +7,6 @@ import java.util.List;
  */
 public interface CompletionListener {
 
-    public void onProcessCompleted(String message, List<String> merger);
+    void onProcessCompleted(String message, List<String> merger);
 
 }

@@ -17,13 +17,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 
-/**
- * Created by TCX on 21/01/17.
- * 
- * 合并和切割的操做（如果编码的话会很耗时，所以用线程池进行管理控制）
- * 
- * 
- */
 public class FfmpegManager {
 
     private static FfmpegManager manager;
@@ -32,16 +25,14 @@ public class FfmpegManager {
 
     private static int NUMBER_OF_CORES =
             Runtime.getRuntime().availableProcessors();
-    // 线程队列
     private final BlockingQueue<Runnable> mDecodeWorkQueue = new LinkedBlockingQueue<Runnable>();
     private static final int KEEP_ALIVE_TIME = 1;
-    // 线程池设置
     private static final TimeUnit KEEP_ALIVE_TIME_UNIT = TimeUnit.SECONDS;
 
-    // 线程池管理
+
     ThreadPoolExecutor mDecodeThreadPool = new ThreadPoolExecutor(
-            NUMBER_OF_CORES,       // 初始化线程
-            NUMBER_OF_CORES,       // 最大线程数
+            NUMBER_OF_CORES,
+            NUMBER_OF_CORES,
             KEEP_ALIVE_TIME,
             KEEP_ALIVE_TIME_UNIT,
             mDecodeWorkQueue);
@@ -62,7 +53,7 @@ public class FfmpegManager {
 
 
     /**
-     * 合并操作
+     * Merger functionality
      * @param context
      * @param videoStitchingRequest
      * @param completionListener
@@ -80,20 +71,21 @@ public class FfmpegManager {
     	 mDecodeThreadPool.execute(trimTask);
     }
 
-    /*
-    * 插入FFmpeg的路径（这里我保存在资源文件下的raw文件夹下）
-    */
+    /**
+     * Insert the path to FFmpeg (here I save it in the raw folder under the resource file)
+     * @param context
+     */
     @SuppressLint("NewApi") private void installFfmpeg(Context context) {
 
         String arch = System.getProperty("os.arch");//获取CPU的架构类型
         String arc = arch.substring(0, 3).toUpperCase();
         String rarc = "";
         int rawFileId;
-        if (arc.equals("ARM")) {//arm架构
+        if (arc.equals("ARM")) {
             rawFileId = R.raw.ffmpeg;
         } else if (arc.equals("MIP")) {
             rawFileId = R.raw.ffmpeg;
-        } else if (arc.equals("X86")) {//x86架构
+        } else if (arc.equals("X86")) {
             rawFileId = R.raw.ffmpeg_x86;
         } else {
             rawFileId = R.raw.ffmpeg;
@@ -102,7 +94,7 @@ public class FfmpegManager {
         File ffmpegFile = new File(context.getCacheDir(), "ffmpeg");
         mFfmpegInstallPath = ffmpegFile.toString();
         Utils.installBinaryFromRaw(context, rawFileId, ffmpegFile);
-        ffmpegFile.setExecutable(true);//对操作者的执行权限
+        ffmpegFile.setExecutable(true);
     }
 
 }

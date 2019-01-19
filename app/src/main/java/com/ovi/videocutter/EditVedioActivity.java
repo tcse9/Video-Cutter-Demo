@@ -172,37 +172,41 @@ import java.util.List;
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_edit_vedio2);
 
+
+
+        dealPermissions();
+
+
+        
+		
+	}
+
+
+	private void postPermissionGranted(){
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-		WindowManager windowManager = (WindowManager) getApplication().
+        WindowManager windowManager = (WindowManager) getApplication().
                 getSystemService(getApplication().WINDOW_SERVICE);
-		screenWidth = windowManager.getDefaultDisplay().getWidth();
+        screenWidth = windowManager.getDefaultDisplay().getWidth();
         screenHeight = windowManager.getDefaultDisplay().getHeight();
 
 
         mVedioPath = getAssetAsFile().getAbsolutePath();//is.toString();//"file:///android_asset/video";//"android.resource://" + getPackageName() + "/" + R.raw.video;//getIntent().getStringExtra("vedio_path");
         info=new ComposeInfo();
-		info.setPath(mVedioPath);
-		if(dao==null){
-			dao=new RecordDao(this);
-		}
-		
- 		bean = new AttachsBeen();
-		bean.setAchsPath(mVedioPath);
-		bean = dao.isExist(bean);
-		info.setTips(bean.getTips());
-		info.setFlags(bean.getFlags());
-        
-		
-		initView();
-        init();
+        info.setPath(mVedioPath);
+        if(dao==null){
+            dao=new RecordDao(this);
+        }
 
-        dealPermissions();
-        
-       
-        
-        
-		
-	}
+        bean = new AttachsBeen();
+        bean.setAchsPath(mVedioPath);
+        bean = dao.isExist(bean);
+        info.setTips(bean.getTips());
+        info.setFlags(bean.getFlags());
+
+
+        initView();
+        init();
+    }
 
 
 
@@ -244,6 +248,7 @@ import java.util.List;
 
 					// permission was granted, yay! Do the
 					// contacts-related task you need to do.
+                    postPermissionGranted();
 				} else {
 
 					// permission denied, boo! Disable the

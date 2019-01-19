@@ -25,6 +25,7 @@ This android app aims to do some advance features on a dummy video like cut, tri
 <img src="/screenshots/cannot_play_issue.png" alt="drawing" width="200"/>
 - App may lack layout design smoothness.
 - The buttons/views other than arow back button, play-pause btton and save button (white checkmark button at top right) are now don't have any action, rather they are represented to resemble the mockup given.
+- After you complete a full play session by pressing the play button, sometimes video doesn't play if you press the play button again.
 
 ## Study element / future plan
 - "A complete, cross-platform solution to record, convert and stream audio and video." -from [FFmpeg official site](https://www.ffmpeg.org/). So there are lot of possibilities to take advantage and make interactive app for application devs.

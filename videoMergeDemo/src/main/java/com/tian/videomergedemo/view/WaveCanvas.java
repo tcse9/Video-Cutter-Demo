@@ -1,18 +1,5 @@
 package com.tian.videomergedemo.view;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-import com.tian.videomergedemo.R;
-import com.tian.videomergedemo.inter.CurrentPosInterface;
-import com.tian.videomergedemo.utils.Pcm2Wav;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -27,6 +14,19 @@ import android.os.AsyncTask;
 import android.os.Handler.Callback;
 import android.os.Message;
 import android.view.SurfaceView;
+
+import com.tian.videomergedemo.R;
+import com.tian.videomergedemo.inter.CurrentPosInterface;
+import com.tian.videomergedemo.utils.Pcm2Wav;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 
 /**

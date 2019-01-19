@@ -1,19 +1,17 @@
 package com.tian.videomergedemo.adapter;
 
-import java.util.ArrayList;
-
 import android.content.Context;
-import android.graphics.Bitmap.Config;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-
 import com.tian.videomergedemo.R;
 import com.tian.videomergedemo.utils.OtherUtils;
 import com.tian.videomergedemo.utils.VideoItem;
+
+import java.util.ArrayList;
 
 public class VideosGridAdapter extends BaseAdapter {
 	private Context mContext;

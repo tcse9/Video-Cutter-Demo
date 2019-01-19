@@ -1,13 +1,6 @@
 package com.tian.videomergedemo;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.util.ArrayList;
-import java.util.List;
-
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
@@ -23,6 +16,11 @@ import com.tian.videomergedemo.utils.VideoFolder;
 import com.tian.videomergedemo.utils.VideoItem;
 import com.tian.videomergedemo.utils.VideoPicker;
 import com.tian.videomergedemo.utils.VideoPicker.OnVideoSelectedListener;
+
+import java.io.File;
+import java.io.FileFilter;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * 以网格显示的选择多个视频文件的界面
  * @author howie

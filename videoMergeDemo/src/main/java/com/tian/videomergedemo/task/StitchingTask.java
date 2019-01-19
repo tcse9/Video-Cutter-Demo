@@ -1,18 +1,18 @@
 package com.tian.videomergedemo.task;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
 import com.tian.videomergedemo.inter.CompletionListener;
 import com.tian.videomergedemo.manager.VideoStitchingRequest;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Created by TCX on 22/01/16.

@@ -16,8 +16,6 @@
 
 package com.tian.videomergedemo.view;
 
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -32,6 +30,8 @@ import android.view.View;
 
 import com.tian.videomergedemo.R;
 import com.tian.videomergedemo.utils.SoundFile;
+
+import java.util.List;
 
 
 

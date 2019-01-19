@@ -1,12 +1,5 @@
 package com.tian.videomergedemo.manager;
 
-import java.io.File;
-import java.util.List;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 
@@ -15,6 +8,13 @@ import com.tian.videomergedemo.inter.CompletionListener;
 import com.tian.videomergedemo.task.StitchingTask;
 import com.tian.videomergedemo.task.TrimTask;
 import com.tian.videomergedemo.utils.Utils;
+
+import java.io.File;
+import java.util.List;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 
 /**

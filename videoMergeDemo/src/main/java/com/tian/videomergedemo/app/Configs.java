@@ -1,10 +1,10 @@
 package com.tian.videomergedemo.app;
 
-import java.io.File;
-
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Environment;
+
+import java.io.File;
 
 //import com.hebei.jiting.jwzt.bean.FindDetailBean;
 

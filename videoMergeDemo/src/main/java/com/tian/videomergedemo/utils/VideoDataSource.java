@@ -1,9 +1,5 @@
 package com.tian.videomergedemo.utils;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -13,6 +9,10 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 
 import com.tian.videomergedemo.R;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

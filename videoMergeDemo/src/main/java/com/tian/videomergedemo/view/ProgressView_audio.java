@@ -1,17 +1,15 @@
 package com.tian.videomergedemo.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.tian.videomergedemo.R;
-
-
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.tian.videomergedemo.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Progress bar on the top of screen

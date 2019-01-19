@@ -1,7 +1,5 @@
 package com.tian.videomergedemo.view;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -14,6 +12,8 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.tian.videomergedemo.R;
+
+import java.util.ArrayList;
 /**
  * 视频编辑界面显示进度的进度条
  * @author howie

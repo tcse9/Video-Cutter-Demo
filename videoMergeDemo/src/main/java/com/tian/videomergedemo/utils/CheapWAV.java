@@ -19,7 +19,6 @@ package com.tian.videomergedemo.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 
 /**
  * CheapWAV represents a standard 16-bit WAV file, splitting it into

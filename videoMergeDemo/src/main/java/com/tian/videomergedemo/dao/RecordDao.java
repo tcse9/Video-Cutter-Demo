@@ -2,8 +2,6 @@ package com.tian.videomergedemo.dao;
 
 
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,6 +10,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.tian.videomergedemo.bean.AttachsBeen;
 import com.tian.videomergedemo.bean.RecordDetail;
+
+import java.util.ArrayList;
 
 /**
  * 操作录制的视频的信息的数据库表的类

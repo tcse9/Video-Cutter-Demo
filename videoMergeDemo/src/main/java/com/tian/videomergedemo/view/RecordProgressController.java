@@ -1,15 +1,15 @@
 package com.tian.videomergedemo.view;
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import android.os.Handler;
 import android.view.View;
 
 import com.tian.videomergedemo.R;
 import com.tian.videomergedemo.RecordActivity;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * record progress controller

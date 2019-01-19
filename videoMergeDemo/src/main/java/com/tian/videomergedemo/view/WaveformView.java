@@ -16,12 +16,6 @@
 
 package com.tian.videomergedemo.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.tian.videomergedemo.R;
-import com.tian.videomergedemo.utils.SoundFile;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -29,6 +23,12 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.tian.videomergedemo.R;
+import com.tian.videomergedemo.utils.SoundFile;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

@@ -1,7 +1,5 @@
 package com.tian.videomergedemo.adapter;
 
-import com.tian.videomergedemo.R;
-
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
+
+import com.tian.videomergedemo.R;
 
 
 /**

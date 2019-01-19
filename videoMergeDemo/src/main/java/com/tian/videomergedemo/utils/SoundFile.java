@@ -16,22 +16,6 @@
 
 package com.tian.videomergedemo.utils;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.ShortBuffer;
-import java.util.Arrays;
-
-import com.tian.videomergedemo.view.MP4Header;
-import com.tian.videomergedemo.view.WAVHeader;
-
-
 import android.annotation.SuppressLint;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -41,6 +25,21 @@ import android.media.MediaFormat;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.util.Log;
+
+import com.tian.videomergedemo.view.MP4Header;
+import com.tian.videomergedemo.view.WAVHeader;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.ShortBuffer;
+import java.util.Arrays;
 
 @SuppressLint("NewApi")
 public class SoundFile {

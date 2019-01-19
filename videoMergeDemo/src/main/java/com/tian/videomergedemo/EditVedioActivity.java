@@ -1,9 +1,5 @@
 package com.tian.videomergedemo;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -44,6 +40,10 @@ import com.tian.videomergedemo.utils.TimeFormatUtils;
 import com.tian.videomergedemo.view.EditVideoImageBar;
 import com.tian.videomergedemo.view.ObservableScrollView;
 import com.tian.videomergedemo.view.VideoEditProgressBar;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

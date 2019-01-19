@@ -1,16 +1,16 @@
 package com.tian.videomergedemo.task;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.util.Log;
 
 import com.tian.videomergedemo.inter.CompletionListener;
 import com.tian.videomergedemo.utils.TimeFormatUtils;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author TCX

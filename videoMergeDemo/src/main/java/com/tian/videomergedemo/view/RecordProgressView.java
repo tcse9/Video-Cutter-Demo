@@ -1,10 +1,6 @@
 package com.tian.videomergedemo.view;
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -18,6 +14,10 @@ import android.view.View;
 
 import com.tian.videomergedemo.R;
 import com.tian.videomergedemo.RecordActivity;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * record progress on 17/5/12.

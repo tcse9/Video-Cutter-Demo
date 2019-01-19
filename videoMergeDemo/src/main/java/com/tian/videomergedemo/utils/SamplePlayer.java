@@ -16,11 +16,11 @@
 
 package com.tian.videomergedemo.utils;
 
-import java.nio.ShortBuffer;
-
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
+
+import java.nio.ShortBuffer;
 
 public class SamplePlayer {
     public interface OnCompletionListener {

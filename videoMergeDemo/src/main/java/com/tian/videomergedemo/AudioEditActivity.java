@@ -1,11 +1,5 @@
 package com.tian.videomergedemo;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -54,6 +48,12 @@ import com.tian.videomergedemo.view.ObservableScrollView;
 import com.tian.videomergedemo.view.WaveSurfaceView;
 import com.tian.videomergedemo.view.WaveformView_1;
 import com.tian.videomergedemo.view.WaveformView_2;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 音频编辑页面

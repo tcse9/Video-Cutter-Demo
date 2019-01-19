@@ -1,11 +1,11 @@
 package com.tian.videomergedemo.utils;
 
+import android.annotation.SuppressLint;
+import android.os.Environment;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import android.annotation.SuppressLint;
-import android.os.Environment;
-import android.util.Log;
 
 public class U {
 

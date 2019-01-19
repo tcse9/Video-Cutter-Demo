@@ -1,7 +1,5 @@
 package com.tian.videomergedemo.view;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -10,6 +8,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.tian.videomergedemo.R;
+
+import java.util.ArrayList;
 
 /**
  * Progress bar on the top of screen

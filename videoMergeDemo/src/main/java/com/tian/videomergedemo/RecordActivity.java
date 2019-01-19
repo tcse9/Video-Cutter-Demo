@@ -2,10 +2,6 @@ package com.tian.videomergedemo;
 
 
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -55,6 +51,10 @@ import com.tian.videomergedemo.utils.SelectPicDialog;
 import com.tian.videomergedemo.utils.SelectPicDialog.OnSelectPicOptionClick;
 import com.tian.videomergedemo.view.CameraHintView;
 import com.tian.videomergedemo.view.RecordProgressController;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 视频录制界面

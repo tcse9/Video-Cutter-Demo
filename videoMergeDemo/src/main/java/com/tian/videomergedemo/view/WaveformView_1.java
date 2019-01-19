@@ -16,12 +16,6 @@
 
 package com.tian.videomergedemo.view;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -33,6 +27,12 @@ import android.view.View;
 
 import com.tian.videomergedemo.R;
 import com.tian.videomergedemo.utils.SoundFile;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 
 

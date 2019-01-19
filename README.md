@@ -1,7 +1,7 @@
 
 
 # Video Cutter [Demo]
-This android app aims to do some advance features on a dummy video like cut, trim, save etc. Note that, this app is neitehr finised yet nor it is full functioning.
+This android app aims to do some advance features on a dummy video like cut, trim, save etc. Note that, this app is neither finised yet nor it is full functioning.
 ### Overview
 - This app is created on the concept of FFmpeg library.
 - Takes a sample video from apps's very own 'assets' folder.

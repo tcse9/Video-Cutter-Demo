@@ -1,0 +1,124 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+/media/ovi/Work Station/android_workspace/VideoCutterDemo
+               -                                         
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea/
+* .idea/VideoMergeDemo.iml
+* .idea/codeStyles/
+* .idea/codeStyles/Project.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* README.md
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:25.+
+gson-2.3.jar => com.google.code.gson:gson:2.3
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.3.jar => version 2.3 in com.google.code.gson:gson:2.3
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+appcompat-v7 => [com.android.support:appcompat-v7:25.+]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => videoMergeDemo/src/main/AndroidManifest.xml
+* assets/ => videoMergeDemo/src/main/assets/
+* libs/android-support-v7-recyclerview (2).jar => videoMergeDemo/libs/android-support-v7-recyclerview (2).jar
+* libs/armeabi-v7a/libksylive.so => videoMergeDemo/src/main/jniLibs/armeabi-v7a/libksylive.so
+* libs/armeabi-v7a/liblocSDK7a.so => videoMergeDemo/src/main/jniLibs/armeabi-v7a/liblocSDK7a.so
+* libs/armeabi-v7a/libmp3lame.so => videoMergeDemo/src/main/jniLibs/armeabi-v7a/libmp3lame.so
+* libs/armeabi-v7a/libphotoprocessing.so => videoMergeDemo/src/main/jniLibs/armeabi-v7a/libphotoprocessing.so
+* libs/armeabi/libksylive.so => videoMergeDemo/src/main/jniLibs/armeabi/libksylive.so
+* libs/armeabi/liblocSDK7a.so => videoMergeDemo/src/main/jniLibs/armeabi/liblocSDK7a.so
+* libs/armeabi/libmp3lame.so => videoMergeDemo/src/main/jniLibs/armeabi/libmp3lame.so
+* libs/armeabi/libphotoprocessing.so => videoMergeDemo/src/main/jniLibs/armeabi/libphotoprocessing.so
+* libs/isoparser-1.0-RC-2.jar => videoMergeDemo/libs/isoparser-1.0-RC-2.jar
+* libs/ksylive.jar => videoMergeDemo/libs/ksylive.jar
+* libs/libksyplayer.jar => videoMergeDemo/libs/libksyplayer.jar
+* libs/libksystat.jar => videoMergeDemo/libs/libksystat.jar
+* libs/libksysv.jar => videoMergeDemo/libs/libksysv.jar
+* libs/x86/libksylive.so => videoMergeDemo/src/main/jniLibs/x86/libksylive.so
+* libs/x86/libmp3lame.so => videoMergeDemo/src/main/jniLibs/x86/libmp3lame.so
+* libs/x86/libphotoprocessing.so => videoMergeDemo/src/main/jniLibs/x86/libphotoprocessing.so
+* res/ => videoMergeDemo/src/main/res/
+* src/ => videoMergeDemo/src/main/java/
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+null
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

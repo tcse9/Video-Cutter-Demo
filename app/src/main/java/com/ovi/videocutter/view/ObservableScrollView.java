@@ -9,7 +9,7 @@ import com.ovi.videocutter.inter.ScrollViewListener;
 public class ObservableScrollView extends HorizontalScrollView {  
   
     private ScrollViewListener scrollViewListener = null;
-    private boolean isTouch=false;//默认是手势控制滑动
+    private boolean isTouch=false;
   
     public ObservableScrollView(Context context) {  
         super(context);  

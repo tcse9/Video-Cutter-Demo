@@ -53,14 +53,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * 
- * 视频的编辑界面
- * 
- * @author Administrator
- *
- */
 @SuppressLint("NewApi") public class EditVedioActivity extends Activity implements OnClickListener, ScrollViewListener {
 	
 	

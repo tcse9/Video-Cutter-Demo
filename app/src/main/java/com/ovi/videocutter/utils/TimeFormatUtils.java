@@ -4,7 +4,7 @@ public class TimeFormatUtils {
 	
 	
 	/**
-	 * 毫秒值转为固定格式的时间�?
+	 * How long does the millisecond value change to a fixed format?
 	 * @param mesc
 	 * @return
 	 */

@@ -21,7 +21,9 @@ This android app aims to do some advance features on a dummy video like cut, tri
 
 ## Known issues
 - App sometimes crashses if the permission are not well maintained (i.e. user not allows them in runtime) or a previous version of the app is already installed in device. To avoid these, please uninstall any previous version of the app.
-- When you cut the video and try to merge back, according to the implementation the merged video will be loaded in the same place but in this case the .mp4 files (after merging) are not being created. It is a known issue from ffmepg and is reported by many communities. For a better understanding visit [this](https://github.com/WritingMinds/ffmpeg-android-java/issues/141) and [this](https://issuetracker.google.com/issues/37067983) links.
+- When you cut the video and try to merge back, according to the implementation the merged video will be loaded in the same place but in this case the .mp4 files (after merging) are not being created. It is a known issue from ffmepg and is reported by many communities. For a better understanding visit [this](https://github.com/WritingMinds/ffmpeg-android-java/issues/141) and [this](https://issuetracker.google.com/issues/37067983) links. You may end up getting result like the screen shot given below:
+
+<img src="/screenshots/cannot_play_issue.png" alt="drawing" width="200"/>
 - App may lack layout design smoothness as the main target was fulfilling the functionality first
 
 ## Study element / future plan

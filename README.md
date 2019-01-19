@@ -32,4 +32,6 @@ This android app aims to do some advance features on a dummy video like cut, tri
 
 ## How to use
 Just follow the instruction given by following screen shot
+
+
 <img src="/screenshots/main_page.png" alt="drawing" width="200"/>

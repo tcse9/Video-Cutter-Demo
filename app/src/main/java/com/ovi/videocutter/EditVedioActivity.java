@@ -347,13 +347,12 @@ import java.util.List;
 	 * 初始化视频文件信息
 	 */
 	private void initVideoInfo(){
-		/*File playFile=new File(mVedioPath);
+		File playFile=new File(mVedioPath);
 		if(playFile.exists()){
 			new ExtractTask(mVedioPath).execute();//执行抽取关键帧的异步任务
 		}else{
 			Toast.makeText(this, "请检查视频文件是否存在！", Toast.LENGTH_SHORT).show();
-		}*/
-        new ExtractTask(mVedioPath).execute();
+		}
 	}
 
 	@Override
@@ -727,7 +726,7 @@ private void reRreshUI(){
 		}
 		
 	}
-	private static final String fileFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/jwzt_recorder";
+	private static final String fileFolder = Environment.getExternalStorageDirectory().getAbsolutePath()+"/video_cutter_demo";
 	private ProgressDialog progressDialog;
 	private String finalPath;
 	private String getRecordFileFolder() {

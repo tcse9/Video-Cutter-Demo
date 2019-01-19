@@ -159,7 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Simple"
+                    android:text="@string/simple"
                     android:textColor="@color/buttonTextToggleColor"
                     android:textStyle="bold" />
 
@@ -195,7 +195,7 @@
                     android:id="@+id/txtAdvance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Advance"
+                    android:text="@string/advance"
                     android:textColor="@color/buttonTextToggleColor"
                     android:textStyle="bold" />
             </LinearLayout>

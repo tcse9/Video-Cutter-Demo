@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:text="是否保存编辑后的素材？"
+            android:text="@string/save_changes_and_exit"
             android:textColor="#2a2a2a"
             android:textSize="16sp" />
 
@@ -40,7 +40,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="是"
+                android:text="@string/yes"
                 android:textColor="#2a2a2a"
                 android:textSize="17sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="否"
+                android:text="@string/no"
                 android:textColor="#2a2a2a"
                 android:textSize="17sp" />
         </LinearLayout>

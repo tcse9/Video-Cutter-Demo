@@ -20,4 +20,9 @@
     <string name="please_wait">Please wait...</string>
     <string name="cropping">Cropping...</string>
     <string name="successfully_edited">Successfully edited...</string>
+    <string name="simple">Simple</string>
+    <string name="advance">Advance</string>
+    <string name="save_changes_and_exit">Save changes and exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

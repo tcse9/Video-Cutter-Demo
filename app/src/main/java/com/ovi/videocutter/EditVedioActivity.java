@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -19,10 +20,12 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -73,7 +76,7 @@ import java.util.List;
 	private TextView mVideoDuration;
 	private ImageView mCutter;
 	private ImageView mDelete;
-	private ImageView mmerge;
+	//private ImageView mmerge;
 	private ArrayList<Integer> keyFrameList;
 	private EditVideoImageBar mImageLists;
 	protected int mDuration=0;
@@ -160,13 +163,14 @@ import java.util.List;
 	private TextView currentTime;
 	private ObservableScrollView mScrollView;
 	private AlertDialog alertDialog;
+    private Button btnTrim, btnCut;
 
     InputStream is;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_edit_vedio);
+		setContentView(R.layout.activity_edit_vedio2);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		WindowManager windowManager = (WindowManager) getApplication().
@@ -258,7 +262,7 @@ import java.util.List;
 	 * 初始化页面控件
 	 */
 	private void initView() {
-		mVideoView = (VideoView)this.findViewById(R.id.vv_vedio_show);
+        mVideoView = (VideoView)this.findViewById(R.id.vv_vedio_show);
 		View backView=this.findViewById(R.id.iv_edit_back);
 		backView.setOnClickListener(this);
 		mPlayerController = (ImageView)this.findViewById(R.id.iv_play_pause);
@@ -268,8 +272,8 @@ import java.util.List;
 		mCutter.setOnClickListener(this);
 		mDelete = (ImageView)this.findViewById(R.id.iv_delete);
 		mDelete.setOnClickListener(this);
-		mmerge = (ImageView)this.findViewById(R.id.iv_merge);
-		mmerge.setOnClickListener(this);
+		//mmerge = (ImageView)this.findViewById(R.id.iv_merge);
+		//mmerge.setOnClickListener(this);
 		mImageLists = (EditVideoImageBar)this.findViewById(R.id.iv_show);
 		
 		mVideoEditProgressBar = (VideoEditProgressBar)this.findViewById(R.id.vedio_progress);
@@ -290,7 +294,47 @@ import java.util.List;
 		});
 		LinearLayout ll_wave_content = (LinearLayout)this.findViewById(R.id.ll_scroll);
 		ll_wave_content.setPadding(screenWidth/2, 0, screenWidth/2, 0);
+
+        btnTrim = findViewById(R.id.btnTrim);
+        btnCut = findViewById(R.id.btnCut);
+
+        topLayoutButtonColorManagement(this);
 	}
+
+
+    private void topLayoutButtonColorManagement(final Context context) {
+
+        btnTrim.setTextColor(ContextCompat.getColor(context, R.color.white));
+        btnTrim.setBackgroundColor(ContextCompat.getColor(context, R.color.buttonTextToggleColor));
+
+        btnCut.setTextColor(ContextCompat.getColor(context, R.color.buttonTextToggleColor));
+        btnCut.setBackgroundColor(ContextCompat.getColor(context, R.color.colorBlack));
+
+        btnTrim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                btnTrim.setTextColor(ContextCompat.getColor(context, R.color.white));
+                btnTrim.setBackgroundColor(ContextCompat.getColor(context, R.color.buttonTextToggleColor));
+
+                btnCut.setTextColor(ContextCompat.getColor(context, R.color.buttonTextToggleColor));
+                btnCut.setBackgroundColor(ContextCompat.getColor(context, R.color.colorBlack));
+            }
+        });
+
+        btnCut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                btnCut.setTextColor(ContextCompat.getColor(context, R.color.white));
+                btnCut.setBackgroundColor(ContextCompat.getColor(context, R.color.buttonTextToggleColor));
+
+                btnTrim.setTextColor(ContextCompat.getColor(context, R.color.buttonTextToggleColor));
+                btnTrim.setBackgroundColor(ContextCompat.getColor(context, R.color.colorBlack));
+            }
+        });
+
+    }
 
 	
 	
@@ -375,13 +419,13 @@ import java.util.List;
 		case R.id.iv_delete://删除按钮
 			cutVideo();
 			break;
-		case R.id.iv_merge://合并按钮
+		/*case R.id.iv_merge://合并按钮
 			if(isEdit){//如果被编辑了
 				showTip();
 			}else{
 				Toast.makeText(EditVedioActivity.this, "您还未对视频进行编辑！", Toast.LENGTH_SHORT).show();
 			}
-			break;
+			break;*/
 			
 		case R.id.tv_yes:
 			//TODO

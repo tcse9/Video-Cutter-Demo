@@ -206,4 +206,9 @@
     <color name="record_progress_blue">#368ca8</color>
     <color name="record_progress_pause">#2c2c2c</color>
     <color name="record_progress_red">#e85932</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrayBg">#201d21</color>
+    <color name="buttonTextToggleColor">#06c293</color>
+    <color name="black_translucent">#50000000</color>
 </resources>

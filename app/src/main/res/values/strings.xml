@@ -11,4 +11,6 @@
     <string name="working">Working</string>
     <string name="edit_saved_successfully">The edit was saved successfully!</string>
     <string name="choose_delete_audio">Please choose to delete the audio end!</string>
+    <string name="trim">Trim</string>
+    <string name="cut">Cut</string>
 </resources>

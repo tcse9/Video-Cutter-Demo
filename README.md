@@ -29,3 +29,7 @@ This android app aims to do some advance features on a dummy video like cut, tri
 - Next target would be to colplete this app asap including following features:
 -- Alongside video audio crop/trim functionality can be added.
 -- Complete the ongoing tasks.
+
+## How to use
+Just follow the instruction given by following screen shot
+![Alt text](/screenshots/main_page.png?raw=true =250x)

@@ -63,7 +63,7 @@ public class FfmpegManager {
         StitchingTask stitchingTask = new StitchingTask(context, mFfmpegInstallPath, videoStitchingRequest, completionListener);
         mDecodeThreadPool.execute(stitchingTask);
     }
-    
+
     //切割操作
     public void trimVideo(Context context,File srcFile,File destFile,List<long[]> mNewSeeks,CompletionListener completionListener){
     	 installFfmpeg(context);

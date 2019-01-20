@@ -14,6 +14,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
+import nl.bravobit.ffmpeg.FFmpeg;
+
 
 public class StitchingTask implements Runnable {
 
@@ -44,7 +47,7 @@ public class StitchingTask implements Runnable {
         if (!dir.exists()) {
             dir.mkdirs();
         }
-        File inputfile = new File(path, "input.txt");
+        final File inputfile = new File(path, "input.txt");
 
         try {
             inputfile.createNewFile();
@@ -59,28 +62,57 @@ public class StitchingTask implements Runnable {
             e.printStackTrace();
         }
 
-        String[] sampleFFmpegcommand = {mFfmpegInstallPath, "-f", "concat", "-i", inputfile.getAbsolutePath(), "-c", "copy", videoStitchingRequest.getOutputPath()};
-        try {
-            Process ffmpegProcess = new ProcessBuilder(sampleFFmpegcommand)
-                    .redirectErrorStream(true).start();
+        String[] command1 = new String[] {
+                "-f",
+                "concat",
+                "-safe",
+                "0",
+                "-i",
+                inputfile.getAbsolutePath(),
+                "-c",
+                "copy",
+                videoStitchingRequest.getOutputPath()
+        };
 
-            String line;
 
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(ffmpegProcess.getInputStream()));
-            Log.d("***", "*******Starting FFMPEG");
-            while ((line = reader.readLine()) != null) {
+        if (FFmpeg.getInstance(context).isSupported()) {
+            // ffmpeg is supported
+            FFmpeg.getInstance(context).execute(command1, new ExecuteBinaryResponseHandler() {
 
-                Log.d("***", "***" + line + "***");
-            }
-            Log.d(null, "****ending FFMPEG****");
+                @Override
+                public void onStart() {
+                    Log.e("***START", "start");
+                }
 
-            ffmpegProcess.waitFor();
-        } catch (Exception e) {
-            e.printStackTrace();
+                @Override
+                public void onProgress(String message) {}
+
+                @Override
+                public void onFailure(String message) {
+                    Log.e("***FAILED", ""+message);
+                }
+
+                @Override
+                public void onSuccess(String message) {
+                    Log.e("***SUCCESS", ""+message);
+                }
+
+                @Override
+                public void onFinish() {
+                    Log.e("***FINISH", "finish");
+                    inputfile.delete();
+                }
+
+            });
+
+
+
+        } else {
+            // ffmpeg is not supported
         }
 
-        inputfile.delete();
+        //inputfile.delete();
+
         completionListener.onProcessCompleted("Video Stitiching Comleted",null);
 
     }
